@@ -7,7 +7,7 @@ import SideBar from "../components/SideBar";
 
 const page = () => {
   return (
-    <div className="flex w-full h-full pr-7 bg-green-500 ">
+    <div className="flex w-full h-full pr-7 ">
         <SideBar/>
     </div>
   );
