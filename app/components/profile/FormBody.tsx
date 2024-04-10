@@ -96,7 +96,7 @@ const FormBody = () => {
           />
         </div>
         <div className="w-1/6 mt-3">
-        <PrimaryButton buttonText={'Save'} icon={<Image src={Check.src} height={20} width={20} alt="Check Mark" />} onClick={()=>{console.log("Saved the Details")}}/>
+        <PrimaryButton buttonText={'Save'} icon={<Image src={Check.src} height={20} width={20} alt="Check Mark" />}/>
         </div>
       </div>
     </div>

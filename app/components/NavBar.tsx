@@ -14,9 +14,6 @@ const NavBar = () => {
       <Logo></Logo>
       <div className="flex w-1/2 gap-6 justify-end items-center">
         <PrimaryButton
-          onClick={() => {
-            console.log("Preview Clicked");
-          }}
           icon={
             <Image src={Preview.src} alt="Preview" width={10} height={10} />
           }
