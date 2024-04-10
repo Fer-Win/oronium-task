@@ -13,12 +13,15 @@ import FooterTextContext from "@/app/context/profile/FooterTextContext";
 const FormBody = () => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const [footerText,setFooterText] = useState('')
-  const {changeText} =useContext(FooterTextContext)
+  const [storeName, setStoreName] = useState('')
+  const {changeFooterText} =useContext(FooterTextContext)
+  const {changeStoreName} = useContext(FooterTextContext)
   const handleFileClick = () => {
     fileInputRef.current?.click();
   };
   const handleSaveClick = ()=>{
-    changeText(footerText)
+    changeFooterText(footerText)
+    changeStoreName(storeName)
     console.log(footerText)
   }
   return (
@@ -99,7 +102,8 @@ const FormBody = () => {
             name="Store Name"
             id="store-name"
             className="outline-none text-sm text-[#29384BB2] font-medium border border-[#E8E8E8] rounded-lg py-4 px-5"
-            placeholder="Oronium Store"
+            value={storeName}
+            onChange={(e)=>{setStoreName(e.target.value)}}
           />
         </div>
         <div className="w-1/6 mt-3" onClick={handleSaveClick}>

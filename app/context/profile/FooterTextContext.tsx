@@ -2,24 +2,31 @@
 import React, { createContext, useState } from "react";
 
 interface ColourContextType {
-  currentText: string;
-  changeText: (newColour: string) => void; 
+  currentFooterText: string;
+  currentStoreName : string,
+  changeFooterText: (newText: string) => void; 
+  changeStoreName : (newStoreName : string)=>void;
 }
 
 const FooterTextContext = createContext<ColourContextType>({
-    currentText: '#C63E4A',
-    changeText: () => {}
+    currentFooterText: '#C63E4A',
+    currentStoreName :'',
+    changeFooterText: () => {},
+    changeStoreName:()=>{} 
 })
 
 export const FooterProvider = ({ children }: {children:any}) => {
-  const [currentText, setCurrentText] = useState('Live your Fashion');
-
-  const changeText = (newText: string) => {
-    setCurrentText(newText);
+  const [currentFooterText, setCurrentFooterText] = useState('Live your Fashion');
+  const [currentStoreName,setCurrentStoreName] = useState('Oronium Stores')
+  const changeFooterText = (newText: string) => {
+    setCurrentFooterText(newText);
   };
+  const changeStoreName = (newStoreName:string)=>{
+    setCurrentStoreName(newStoreName)
+  }
 
   return (
-    <FooterTextContext.Provider value={{currentText, changeText}  }>
+    <FooterTextContext.Provider value={{currentFooterText,currentStoreName,changeStoreName, changeFooterText}  }>
       {children}
     </FooterTextContext.Provider>
   );
