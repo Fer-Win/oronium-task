@@ -7,10 +7,7 @@ const ThemeSelection = () => {
   const {currentColour} =useContext(ColourContext)
   const [isOpen, setIsOpen] = useState(false)
   const [selectedColour, setSelectedColour] = useState('')
-const handleClick = ()=>{
-     changeColour('#3E92CC')
- 
-}
+
 const handleColorChange = (e:any)=>{
   setSelectedColour(e.target.value)
   console.log("Selection is ", e.target.value);
@@ -21,7 +18,7 @@ const handleColorChange = (e:any)=>{
   return (
     <div className="flex flex-col justify-start text-[#29384B] gap-2" onClick={()=>{setIsOpen(!isOpen)}}>
       <div className="text-base font-semibold">Theme</div>
-      <div className=" cursor-pointer flex justify-between bg-[#29384B08]  items-center px-4 py-4 gap-2  border border-[#29384B12] rounded-md " onClick={handleClick}>
+      <div className=" cursor-pointer flex justify-between bg-[#29384B08]  items-center px-4 py-4 gap-2  border border-[#29384B12] rounded-md " >
         <div className="text-sm">Primary Colour</div>
         <div className="opacity-0 cursor-pointer ">
           <input type="color" value={selectedColour} onChange={handleColorChange} />

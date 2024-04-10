@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import Upload from "@/public/outline/upload.svg";
 import Check from "@/public/outline/check.svg"
 import PrimaryButton from "../ui/PrimaryButton";
@@ -8,13 +8,19 @@ import SocialLinks from "./ui/SocialLinks";
 import X from '@/public/social/x.svg'
 import Facebook from '@/public/social/facebook.svg'
 import Instagram from '@/public/social/insta.svg'
+import FooterTextContext from "@/app/context/profile/FooterTextContext";
 
 const FormBody = () => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
-
+  const [footerText,setFooterText] = useState('')
+  const {changeText} =useContext(FooterTextContext)
   const handleFileClick = () => {
     fileInputRef.current?.click();
   };
+  const handleSaveClick = ()=>{
+    changeText(footerText)
+    console.log(footerText)
+  }
   return (
     <div className="px-8 py-6 h-full w-1/2 flex flex-col justify-start gap-4">
       <div className="flex flex-col gap-2">
@@ -54,7 +60,8 @@ const FormBody = () => {
             name="Footer Text"
             id="footer-text"
             className="outline-none text-base text-[#29384BB2] font-medium border border-[#E8E8E8] rounded-lg py-3 px-5"
-            placeholder="Live your Fashion"
+            value={footerText}
+            onChange={(e)=>{setFooterText(e.target.value)}}
           />
         </div>
         <div className="flex flex-col gap-2 justify-start">
@@ -95,7 +102,7 @@ const FormBody = () => {
             placeholder="Oronium Store"
           />
         </div>
-        <div className="w-1/6 mt-3">
+        <div className="w-1/6 mt-3" onClick={handleSaveClick}>
         <PrimaryButton buttonText={'Save'} icon={<Image src={Check.src} height={20} width={20} alt="Check Mark" />}/>
         </div>
       </div>
