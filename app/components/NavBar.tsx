@@ -10,7 +10,7 @@ import ProfilePic from "@/public/profile-pic.jpg";
 
 const NavBar = () => {
   return (
-    <div className="px-7 py-6 w-full border-b  border-[#EAEAEA] flex justify-between ">
+    <div className="px-7 py-5 w-full border-b  border-[#EAEAEA] flex justify-between ">
       <Logo></Logo>
       <div className="flex w-1/2 gap-6 justify-end items-center">
         <PrimaryButton
