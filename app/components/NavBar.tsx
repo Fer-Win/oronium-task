@@ -10,9 +10,9 @@ import ProfilePic from "@/public/profile-pic.jpg";
 
 const NavBar = () => {
   return (
-    <div className="w-screen border-b  border-[#EAEAEA] flex justify-between bg-red-500">
+    <div className="px-7 py-6 w-full border-b  border-[#EAEAEA] flex justify-between ">
       <Logo></Logo>
-      <div className="flex w-2/3 gap-5 justify-center items-center">
+      <div className="flex w-1/2 gap-6 justify-end items-center">
         <PrimaryButton
           onClick={() => {
             console.log("Preview Clicked");
@@ -22,7 +22,7 @@ const NavBar = () => {
           }
           buttonText="Preview Store"
         />
-        <div className="flex justify-center items-center h-12 w-12  bg-[#29384B1A] bg-opacity-10 rounded-lg">
+        <div className="flex justify-center items-center h-12 w-12  bg-[#29384B1A] hover:bg-[#1b263342] cursor-pointer transition-all duration-200 ease-in-out rounded-lg">
           <Image src={Bell.src} alt="Bell icon" width={28} height={28}></Image>
         </div>
         <div className="h-12 w-12 bg-red-500 rounded-full bg-cover overflow-hidden">

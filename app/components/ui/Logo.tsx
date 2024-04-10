@@ -10,7 +10,7 @@ const Logo = () => {
         width={50}
         height={50}
       ></Image>
-      <span>Oronium E-Commerce Store</span>
+      <span className="text-lg font-semibold">Oronium E-Commerce Store</span>
     </div>
   );
 };
