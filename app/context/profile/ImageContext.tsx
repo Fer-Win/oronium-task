@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
 interface ImageContextType {
@@ -10,8 +10,8 @@ const ImageContext = createContext<ImageContextType | undefined>(undefined);
 
 export const useImage = () => {
   const context = useContext(ImageContext);
- 
-  return context as ImageContextType; 
+
+  return context as ImageContextType;
 };
 
 interface ImageProviderProps {

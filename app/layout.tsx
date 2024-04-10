@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter,Urbanist } from "next/font/google";
+import { Inter, Urbanist } from "next/font/google";
 import "./globals.css";
 import { ColourProvider } from "./context/ColourContext";
 import { FooterProvider } from "./context/profile/FooterTextContext";
@@ -20,20 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-     
       <body className={urbanist.className}>
-      {/* <NavBar/> */}
-      <ImageProvider>
-      <ColourProvider>
-      <FooterProvider>
-        {children}
-      </FooterProvider>
         
-      </ColourProvider>
-      </ImageProvider>
-        
-        </body>
-    
+        <ImageProvider>
+          <ColourProvider>
+            <FooterProvider>{children}</FooterProvider>
+          </ColourProvider>
+        </ImageProvider>
+      </body>
     </html>
   );
 }

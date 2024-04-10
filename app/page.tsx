@@ -11,9 +11,9 @@ export default function Home() {
           href={"/admin"}
           className="text-violet-500 hover:text-violet-400 px-2 transition-all duration-200 ease-in-out"
         >
-           Admin 
+          Admin
         </Link>
-         page
+        page
       </div>
     </main>
   );
