@@ -57,7 +57,7 @@ const FormBody = () => {
               id="store-logo"
               accept="image/*"
               ref={fileInputRef}
-              className=" absolute"
+              className=" absolute opacity-0"
               onChange={handleImageChange}
             />
             <Image
