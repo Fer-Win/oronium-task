@@ -9,7 +9,7 @@ import ColourContext from '@/app/context/ColourContext'
 import FooterTextContext from '@/app/context/profile/FooterTextContext'
 
 const HeaderMockup = () => {
-  
+  const {currentColour} = useContext(ColourContext)
   const {currentStoreName}  = useContext(FooterTextContext)
   return (
     <div className='w-5/6   border border-[#29384B26] rounded-xl py-8 gap-4 flex flex-col  justify-around items-center'>
@@ -26,7 +26,7 @@ const HeaderMockup = () => {
           <div className='flex gap-3 justify-center items-center'>
             <Image alt='Heart' src={LikeButton} width={20} height={20}/>
             <div className='relative'>
-              <div  className=' absolute -top-1 -right-1  bg-[#C63E4A] rounded-full text-white text-[8px] h-4 w-4 flex justify-center items-center'>5</div>
+              <div style={{backgroundColor : currentColour}}  className=' absolute -top-1 -right-1  rounded-full text-white text-[8px] h-4 w-4 flex justify-center items-center'>5</div>
             <Image alt='Heart' src={Cart} width={20} height={20}/>
             </div>
           </div>

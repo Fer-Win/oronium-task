@@ -13,9 +13,7 @@ import ColourContext, { ColourProvider } from "../../context/ColourContext";
 const SideBar = () => {
 
   const {currentColour} = useContext(ColourContext)
-  useEffect(() => {
-   console.log("Current Colour :",currentColour)
-  }, [currentColour])
+
   
   const handleTabClick =(tabText:string)=>{
     console.log(tabText)

@@ -22,7 +22,7 @@ const FormBody = () => {
   const handleSaveClick = ()=>{
     changeFooterText(footerText)
     changeStoreName(storeName)
-    console.log(footerText)
+
   }
   return (
     <div className="px-8 py-6 h-full w-1/2 flex flex-col justify-start gap-4">
