@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <NavBar/>
-      <body className={urbanist.className}>{children}</body>'
+      <body className={urbanist.className}>{children}</body>
     
     </html>
   );
