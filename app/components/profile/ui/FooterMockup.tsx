@@ -13,7 +13,7 @@ const HeaderMockup = () => {
         <div className='relative'>
             <Image src={FooterImage} alt='Header Image' width={340} height={340} className=''/>
             <div className='text-[#29384B33] text-3xl absolute font-bold bottom-20 w-1/2 left-12'>Live your Fashion</div>
-            <div className='absolute flex gap-3 bottom-11 left-12'>
+            <div className='absolute flex gap-3 bottom-11 left-12 opacity-35'>
                     <Image src={Instagram} alt='Instagram' width={20} height={20}/>
                     <Image src={X} alt='X' width={20} height={20}/>
                     <Image src={Facebook} alt='Facebook' width={20} height={20}/>
