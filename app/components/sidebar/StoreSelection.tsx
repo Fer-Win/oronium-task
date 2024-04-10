@@ -1,7 +1,7 @@
 import React from 'react'
-import Logo from '@/public/oronium-logo.svg'
+import Logo from '@/public/brand/oronium-logo.svg'
 import Image from 'next/image'
-import ArrowIcon from '@/public/outline/Icon.svg'
+import ArrowIcon from '@/public/outline/icon.svg'
 const StoreSelection = () => {
   return (
     <div className=' cursor-pointer flex justify-between bg-[#29384B08]  items-center px-3 py-3 gap-2   rounded-md '>

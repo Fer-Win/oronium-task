@@ -1,5 +1,5 @@
 import React from "react";
-import OroniumLogo from "@/public/oronium-logo.svg";
+import OroniumLogo from "@/public/brand/oronium-logo.svg";
 import Image from "next/image";
 const Logo = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import Tab from './ui/Tab'
+import Tab from '../ui/Tab'
 import Home from '@/public/tab/home.svg'
 import Store from '@/public/tab/store.svg'
 import Profile from '@/public/tab/profile.svg'
